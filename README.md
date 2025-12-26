@@ -154,6 +154,12 @@ The delegation framework has been deployed to Monad testnet (Chain ID: 10143) fo
 - **RPC URL**: https://testnet-rpc.monad.xyz
 - **Explorer**: https://testnet.monadscan.com
 
+> **Note on Deterministic Deployment**: This deployment uses CREATE2 with the same salt ("GATOR") as MetaMask's official deployment strategy. As a result:
+> - **SimpleFactory and Enforcer contracts** have identical addresses to MetaMask's v1.3.0 deployment (no constructor arguments)
+> - **Core contracts** (DelegationManager, DeleGators) have unique addresses due to different constructor arguments (deployer address)
+> 
+> This ensures compatibility with MetaMask's cross-chain address strategy while maintaining deployment independence.
+
 **Core Contract Addresses:**
 
 | Contract | Address |
@@ -162,7 +168,7 @@ The delegation framework has been deployed to Monad testnet (Chain ID: 10143) fo
 | MultiSigDeleGator | [`0x2618a497ae6fda0600060fbbb2d3e9ea81904087`](https://testnet.monadscan.com/address/0x2618a497ae6fda0600060fbbb2d3e9ea81904087) |
 | HybridDeleGator | [`0x8ed2a135d37d196b47a6ee2b349959e770040aa3`](https://testnet.monadscan.com/address/0x8ed2a135d37d196b47a6ee2b349959e770040aa3) |
 | EIP7702StatelessDeleGator | [`0x31e851ddd4c2dd475315bc8449a40e4b44cc3ae2`](https://testnet.monadscan.com/address/0x31e851ddd4c2dd475315bc8449a40e4b44cc3ae2) |
-| SimpleFactory | [`0x69aa2f9fe1572f1b640e1bbc512f5c3a734fc77c`](https://testnet.monadscan.com/address/0x69aa2f9fe1572f1b640e1bbc512f5c3a734fc77c) |
+| SimpleFactory | [`0x69Aa2f9fe1572F1B640E1bbc512f5c3a734fc77c`](https://testnet.monadscan.com/address/0x69Aa2f9fe1572F1B640E1bbc512f5c3a734fc77c) |
 
 **Notable Enforcer Contracts:**
 
