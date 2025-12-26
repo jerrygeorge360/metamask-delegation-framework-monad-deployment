@@ -1,8 +1,10 @@
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
 
 
+
 [profile.default]
 auto_detect_solc = false
+use_system_solc = true
 src = "src"
 out = "out"
 libs = ["lib"]

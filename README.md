@@ -1,5 +1,8 @@
 # Delegation Framework
 
+> [!NOTE]  
+> **Monad Testnet Deployment**: This repository was cloned and deployed to Monad testnet following a network reset. The contracts have been deployed and verified on Monad testnet for testing and development purposes.
+
 > [!WARNING]
 > We use tags for audited versions of code releases and the `main` branch is the working development branch. All PRs should be based against `main` branch.
 
@@ -141,6 +144,36 @@ forge script script/DeployMultiSigDeleGator.s.sol --private-key $PRIVATE_KEY --b
 ### Deployments
 
 [Read more on "Deployments" ->](/documents/Deployments.md)
+
+#### Monad Testnet Deployment
+
+The delegation framework has been deployed to Monad testnet (Chain ID: 10143) following a network reset. Key deployment details:
+
+- **Network**: Monad Testnet
+- **Chain ID**: 10143  
+- **RPC URL**: https://testnet-rpc.monad.xyz
+- **Explorer**: https://testnet.monadscan.com
+
+**Core Contract Addresses:**
+
+| Contract | Address |
+|----------|---------|
+| DelegationManager | [`0x04b8a285e512fd6f3901a9672a6c9ae5ec8a22ec`](https://testnet.monadscan.com/address/0x04b8a285e512fd6f3901a9672a6c9ae5ec8a22ec) |
+| MultiSigDeleGator | [`0x2618a497ae6fda0600060fbbb2d3e9ea81904087`](https://testnet.monadscan.com/address/0x2618a497ae6fda0600060fbbb2d3e9ea81904087) |
+| HybridDeleGator | [`0x8ed2a135d37d196b47a6ee2b349959e770040aa3`](https://testnet.monadscan.com/address/0x8ed2a135d37d196b47a6ee2b349959e770040aa3) |
+| EIP7702StatelessDeleGator | [`0x31e851ddd4c2dd475315bc8449a40e4b44cc3ae2`](https://testnet.monadscan.com/address/0x31e851ddd4c2dd475315bc8449a40e4b44cc3ae2) |
+| SimpleFactory | [`0x69aa2f9fe1572f1b640e1bbc512f5c3a734fc77c`](https://testnet.monadscan.com/address/0x69aa2f9fe1572f1b640e1bbc512f5c3a734fc77c) |
+
+**Notable Enforcer Contracts:**
+
+| Contract | Address |
+|----------|---------|
+| AllowedCalldataEnforcer | [`0xc2b0d624c1c4319760C96503BA27C347F3260f55`](https://testnet.monadscan.com/address/0xc2b0d624c1c4319760C96503BA27C347F3260f55) |
+| AllowedMethodsEnforcer | [`0x2c21fD0Cb9DC8445CB3fb0DC5E7Bb0Aca01842B5`](https://testnet.monadscan.com/address/0x2c21fD0Cb9DC8445CB3fb0DC5E7Bb0Aca01842B5) |
+| ERC20BalanceChangeEnforcer | [`0xcdF6aB796408598Cea671d79506d7D48E97a5437`](https://testnet.monadscan.com/address/0xcdF6aB796408598Cea671d79506d7D48E97a5437) |
+| ERC721TransferEnforcer | [`0x3790e6B7233f779b09DA74C72b6e94813925b9aF`](https://testnet.monadscan.com/address/0x3790e6B7233f779b09DA74C72b6e94813925b9aF) |
+
+All enforcer contracts have been deployed and verified on the Monad testnet. For a complete list of enforcer addresses, see the [`verifyenforcers.sh`](verifyenforcers.sh) script. Verification status can be checked on the Monad testnet explorer.
 
 ### Javascript
 
